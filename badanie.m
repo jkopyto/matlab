@@ -1,6 +1,6 @@
 function x = badanie(A)
   clc
-  disp("Badana macierz ="), disp(A);
+  #disp("Badana macierz ="), disp(A);
   
   [Q, R] = qr(A);
   disp("\nWspolczynnik uwarunkowania macierzy = "), disp(cond(A));
@@ -20,7 +20,7 @@ function x = badanie(A)
   x_gauss = gauss(A, b);
   
   disp("\nCzas obliczen dla metody gaussa ="), disp(etime(clock(), time_gauss));
-  disp("\nx = "), disp(x_gauss);
+  #disp("\nx = "), disp(x_gauss);
   
   #QR
   time_qr = clock();
@@ -28,7 +28,7 @@ function x = badanie(A)
   x_qr = R \ Q' * b;
   
   disp("\nCzas obliczen przy uzyciu rozkladu QR ="), disp(etime(clock(), time_qr));
-  disp("\nx = "), disp(x_qr);
+  #disp("\nx = "), disp(x_qr);
   
   accurate_sol = A \ b;
   
